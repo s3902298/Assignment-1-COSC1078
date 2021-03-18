@@ -1,6 +1,6 @@
 header {
     color: #fff;
-    background-color: #333;
+    background-color: #282828;
     height: 100px;
     position: sticky;
 }
@@ -20,7 +20,7 @@ main {
 }
 
 div.main {
-    padding: 2%;
+    padding: 20px;
     margin: auto;
     color: #fff;
     background-color: rgba(24, 24, 24, 1);
@@ -28,17 +28,17 @@ div.main {
     display: flex;
 }
 
+div.column {
+    padding: 0%;
+    flex: 100%;
+}
+
 div.contentGroup {
     color: #fff;
     background-color: #222;
-    margin: 20px 10px 20px 10px;
+    margin: 10px 10px 20px 10px;
     padding: 1% 5%;
     border-radius: 10px;
-}
-
-div.column {
-    padding: 0%;
-    flex: 50%;
 }
 
 table {
@@ -51,6 +51,7 @@ tr, td {
 
 img {
     width: 100%;
+    padding: 5px;
 }
 
 p, h1, h2, h3 {
