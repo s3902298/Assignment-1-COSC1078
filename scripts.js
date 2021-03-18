@@ -27,7 +27,7 @@ function resizeMain () {
 // Scrolls the background slowly with the mainElement scrollbar.
 function parallaxBack () {
     // Could be too trippy, may change values later
-    var xpos = Math.sin(mainElement.scrollTop / 400) * 100;
+    var xpos = Math.sin(mainElement.scrollTop / 200) * 10;
     var ypos = -mainElement.scrollTop / 4;
     mainElement.style.backgroundPosition = xpos + "px " + ypos + "px";
 }
