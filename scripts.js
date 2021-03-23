@@ -8,6 +8,7 @@ I utterly hate HTML, but, what else can I do?
 var headerElement = document.getElementById("scriptHeader");
 var mainElement = document.getElementById("scriptMain");
 var greybackElements = document.getElementsByClassName("main");
+var navElement = document.getElementsByClassName("nav")[0];
 var desktopLayout = null;
 
 function resizeMain () {
@@ -21,6 +22,7 @@ function resizeMain () {
             greybackElements[e].style.width = (desktopLayout ? "60%" : "90%");
             greybackElements[e].style.backgroundColor = (desktopLayout ? "rgba(24, 24, 24, 1)" : "rgba(24, 24, 24, 0)");
         }
+        navElement.style.width = (desktopLayout ? "85%" : "100%");
     }
 }
 

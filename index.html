@@ -7,7 +7,16 @@
     </head>
     <body>
         <header id="scriptHeader">
-            test
+        <table style="width: 85%;" class="nav">
+            <tr>
+                <td><h1>Chris' Profile</h1></td>
+                <td class="headerBtn"><a href="#aboutme"><h2>About Me</h2></a></td>
+                <td class="headerBtn"><a href="#personality"><h2>Personality</h2></a></td>
+                <td class="headerBtn"><a href="#whyimhere"><h2>Why I'm Here</h2></a></td>
+                <td class="headerBtn"><a href="#idealjob"><h2>Ideal Job</h2></a></td>
+                <td class="headerBtn"><a href="#project"><h2>Project</h2></a></td>
+            </tr>
+            </table>
         </header>
         <main id="scriptMain">
             <div class="main">
@@ -16,7 +25,7 @@
                 <div class="column">
                     <div class="contentGroup" style="display: flex;" id="aboutme">
                         <div style="flex: 100%;">
-                            <h2>About Me</h2>
+                            <h3>About Me</h3>
                             <p>Hi! My name's Chris, and I'm studying my first year of IT at RMIT. I've got a Polish background, though I barely speak Polish and am instead learning French. In high school I enjoyed Systems Engineering and Mathematical Methods classes, and have been using my programming skills throughout.</p>
                             <p style="font-size: 14px;">I use arch btw</p>
                             <p style="font-size: 8px;">Not really, I'm just a Mint normie...</p>
@@ -25,7 +34,7 @@
                     </div>
                     
                     <div class="contentGroup" id="personality">
-                        <h2>Personality Tests</h2>
+                        <h3>Personality Tests</h3>
                         <table>
                             <tr>
                                 <td><a target="_blank" href="test1.png"><img src="test1.png" alt="Test Results 1"></a></td>
@@ -47,7 +56,7 @@
                 <!-- Right Side -->
                 <div class="column">
                     <div class="contentGroup" id="whyimhere">
-                        <h2>Why I'm Here</h2>
+                        <h3>Why I'm Here</h3>
                         <p>From a young age I was interested in computers and video games, always wanting to make a game of my own. With the help of my dad, I learned how to use electronics fluently and slowly began experimenting with our old laptop.
                         <p>Like most students in my primary school, my first experience with real programming began with a simple visual language. Noticing I had a knack for coding, I moved on to writing simple
                         <a target="_blank" href="http://www.justbasic.com">Just BASIC scripts</a>
@@ -63,10 +72,10 @@
                     </div>
                 
                     <div class="contentGroup" id="idealjob">
-                        <h2>My Ideal Job</h2>
+                        <h3>My Ideal Job</h3>
                         <p>My "ideal job" would be to work with a group of my friends on making games, or programming software in general, rather than for any company. There would be a variety of jobs I could undertake, ranging anywhere from managing the project to actually writing code - but this, being able to self-manage and work on whatever I feel necessary, is what makes working for myself so appealing. I'll not only get to learn different things, but I can even completely avoid having to call in sick or have to make excuses for myself. Ultimately I'm hoping I'll end up making enough to support myself without too much stress or having to work elsewhere.
                         <p>Of course, I feel far from ready to take on serious coding work. While I am able to solve problems and write code, being comfortable with troubleshooting issues and excelling in past programming clases, my only real experience with coding something as a team is by having worked on
-                        <a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=714494157493764226&permissions=126022&scope=bot">a Discord bot</a>,
+                        <a target="_blank" href="https://discord.com/api/oauth3/authorize?client_id=714494157493764226&permissions=126022&scope=bot">a Discord bot</a>,
                         all the while running into communication errors. I have yet to learn how to motivate myself to keep working on really large projects where I may encounter a road block, too, but I think a sense of commitment will come with working with others.
                         <p>All in all, I feel I will be much more prepared to code professionally after having completed my RMIT course, where I will be practicing all of those things. I'm excited, and a bit nervous, to be working with a team of new people in just a few more weeks and in the years to come.</p>
                     </div>
@@ -76,13 +85,13 @@
             <!-- Lower area -->
             <div class="main">
                 <div class="column">
-                    <div class="contentGroup" id="projectintro">
-                        <h2>Intro to My Project Idea</h2>
+                    <div class="contentGroup" id="project">
+                        <h3>Intro to My Project Idea</h3>
                         <p>While playing video games, I usually crank the volume up and play music, or sometimes I put a YouTube video on another monitor. Occasionally I may even put on my VR headset and become fully immersed in the game world, but while this increases the enjoyment of using a computer, I also get jumpy when I see someone walk into my room from the corner of my eye - in some cases I may not even notice people until they stand right next to me, and start panic to pause the game and everything else.
-                        <p>Thus, I introduce: <i>Automatic Game Pauser</i> (AKA <i>Auto Volume Decreaser</i>, AKA <i>Auto Alt-Tabber</i>, <i><s>AKA Auto Porn Hider</s></i>)! Using an Arduino or similar to detect a door opening, a gesture or keybind, the script may automagically decrease the volume of the system, pause media playback, or do anything else one may need to take notice of the real world for once in their lives!</p>
+                        <p>Thus, I introduce: <abbr title="(AKA Auto Volume Decreaser, AKA Auto Alt-Tabber, AKA Auto Porn Hider)"><i>Automatic Game Pauser</i></abbr>! Using an Arduino or similar to detect a door opening, a gesture or keybind, the script may automagically decrease the volume of the system, pause media playback, or do anything else one may need to take notice of the real world for once in their lives!</p>
                     </div>
-                    <div class="contentGroup" id="projectdescription">
-                        <h2>Detailed Description</h2>
+                   <div class="contentGroup">
+                        <h3>Detailed Description</h3>
                         <p>Though this idea is simple in principle, I believe it will require quite a bit of work to realize due to its configurable nature - users must be able to specify which applications to minimize, whether to pause playback, how much to decrease the volume, or possibly even what inputs to automatically simulate, not to mention what to restore and when (if the door closes, or if a keybind is necessary). This would need to be effectively visualized and easily modified - modifiable action elements in a listbox would suffice - and actions performed on programs may need to be recorded by the software as typing names may be tedious or impossible for non-technical users.
                         <p>Additionally, triggering of the system must allow a large variety of options for the sake of accessibility; users who do not have an Arduino and some kind of sensor for detecting the opening of a door must be able to quickly activate the system though other means, perhaps with a mouse gesture or keybind. Scripts for microcontrollers may need to be supplied with the script to properly send messages to the host computer, through serial communication or wirelessly, and all managed and configured from within the software GUI and all bound actions.
                         <p>Creating a system that allows users to manage actions and . Implementation and interfacing with various programs will also be a challenge, however can definitely be accomplished with libraries such as <code>pyautogui</code> for Python.</p>
