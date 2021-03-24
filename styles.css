@@ -13,6 +13,10 @@ header {
 
 .headerBtn {
     background-color: #181818;
+    width: 75%;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
 }
 
 body {
