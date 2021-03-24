@@ -68,12 +68,12 @@ img {
     padding: 5px;
 }
 
-p, a, h1, h2, h3 {
+p, a, h1, h2, h3, li {
     font-family: "Arial";
     color: #fff;
 }
 
-p {
+p, li {
     font-size: 18px;
 }
 
