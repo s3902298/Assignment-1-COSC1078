@@ -9,9 +9,20 @@ var headerElement = document.getElementById("scriptHeader");
 var mainElement = document.getElementById("scriptMain");
 var footerElement = document.getElementById("scriptFooter");
 var buttonArea = document.getElementById("buttonArea");
+var refsElement = document.getElementById("refs");
+var annoyingButtonElement = document.getElementById("annoyingButton");
 var greybackElements = document.getElementsByClassName("main");
 var navElement = document.getElementsByClassName("nav")[0];
 var desktopLayout = null;
+
+var buttonPos = null;
+var buttonGeometry = null;
+var buttonVel = {"x": 0, "y": 0};
+var buttonVals = {"drag": 0.95, "bump": 10};
+
+function pyth (a, b) {
+    return Math.sqrt(a * a + b * b);
+}
 
 function resizeMain () {
     mainElement.style.height = (window.innerHeight - headerElement.clientHeight) + "px";
@@ -40,8 +51,45 @@ function parallaxBack () {
     mainElement.style.backgroundPosition = xpos + "px " + ypos + "px";
 }
 
-function annoyingButton () {
-    console.log("Blah");
+function toggleRefs (mode) {
+    refsElement.style.display = ((refsElement.style.display == "none" || mode == 1) && mode != 2 ? "block" : "none");
+}
+
+function bumpAnnoyingButton () {
+    if (buttonPos == null) {
+        buttonGeometry = annoyingButtonElement.getBoundingClientRect();
+        buttonPos = {"x": buttonGeometry.x, "y": buttonGeometry.y};
+        annoyingButtonElement.style.position = "absolute";
+        annoyingButtonElement.style.left = buttonPos.x + "px";
+        annoyingButtonElement.style.top = buttonPos.y + "px";
+        setInterval(doAnnoyingButton, 10);
+    }
+    
+    var xMid = buttonPos.x + buttonGeometry.width / 2;  // Get middle positions
+    var yMid = buttonPos.y + buttonGeometry.height / 2;
+    var xDiff = (xMid - event.clientX);  // Get push vector
+    var yDiff = (yMid - event.clientY);
+    buttonPos = {"x": buttonPos.x + xDiff * 0.75, "y": buttonPos.y + yDiff * 0.75};  // Push button to get out of mouse
+    
+    xDiff /= buttonGeometry.width * 2;  // Normalize relative to button size
+    yDiff /= buttonGeometry.height * 2;
+    var mDiff = pyth(xDiff, yDiff);
+    xDiff /= mDiff; yDiff /= mDiff;
+    buttonVel = {"x": buttonVel.x + xDiff * buttonVals.bump, "y": buttonVel.y + yDiff * buttonVals.bump};  // Apply velocities
+    
+}
+
+function doAnnoyingButton () {
+    buttonPos = {"x": buttonPos.x + buttonVel.x, "y": buttonPos.y + buttonVel.y};
+    annoyingButtonElement.style.left = buttonPos.x + "px";
+    annoyingButtonElement.style.top = buttonPos.y + "px";
+    
+    buttonVel = {"x": buttonVel.x * buttonVals.drag, "y": buttonVel.y * buttonVals.drag};
+}
+
+function pressAnnoyingButton () {
+    document.getElementById("audio").play();
+    alert("get rickrolled");
 }
 
 

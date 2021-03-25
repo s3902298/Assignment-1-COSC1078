@@ -18,6 +18,14 @@ footer {
     font-size: 14px;
 }
 
+#refs {
+    display: none;
+}
+
+#refsTitle:hover {
+    cursor: pointer;
+}
+
 .nav {
     margin: auto;
 }
