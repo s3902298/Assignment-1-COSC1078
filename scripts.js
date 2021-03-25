@@ -7,6 +7,7 @@ I utterly hate HTML, but, what else can I do?
 //   so that a scrollbar actually appears.
 var headerElement = document.getElementById("scriptHeader");
 var mainElement = document.getElementById("scriptMain");
+var footerElement = document.getElementById("scriptFooter");
 var greybackElements = document.getElementsByClassName("main");
 var navElement = document.getElementsByClassName("nav")[0];
 var desktopLayout = null;
@@ -23,6 +24,7 @@ function resizeMain () {
             greybackElements[e].style.backgroundColor = (desktopLayout ? "rgba(24, 24, 24, 1)" : "rgba(24, 24, 24, 0)");
         }
         navElement.style.width = (desktopLayout ? "85%" : "100%");
+        footerElement.style.width = (desktopLayout ? "60%" : "100%");
     }
 }
 
