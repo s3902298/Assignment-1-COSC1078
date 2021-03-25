@@ -20,11 +20,11 @@ function resizeMain () {
         desktopLayout = newDesktopLayout;
         for (var e = 0; e < 2; e++) {
             greybackElements[e].style.display = (desktopLayout ? "flex" : "block");
-            greybackElements[e].style.width = (desktopLayout ? "60%" : "90%");
+            greybackElements[e].style.width = (desktopLayout ? "65%" : "90%");
             greybackElements[e].style.backgroundColor = (desktopLayout ? "rgba(24, 24, 24, 1)" : "rgba(24, 24, 24, 0)");
         }
         navElement.style.width = (desktopLayout ? "85%" : "100%");
-        footerElement.style.width = (desktopLayout ? "60%" : "100%");
+        footerElement.style.width = (desktopLayout ? "65%" : "100%");
     }
 }
 
