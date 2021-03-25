@@ -11,7 +11,7 @@
             <tr>
                 <td><h1>Chris' Profile</h1></td>
                 <td><a href="#aboutme"><h2 class="headerBtn">About Me</h2></a></td>
-                <td><a href="#personality"><h2 class="headerBtn">Personality</h2></a></td>
+                <td><a href="#personality"><h2 class="headerBtn">Quizes</h2></a></td>
                 <td><a href="#whyimhere"><h2 class="headerBtn">Why I'm Here</h2></a></td>
                 <td><a href="#idealjob"><h2 class="headerBtn">Ideal Job</h2></a></td>
                 <td><a href="#project"><h2 class="headerBtn">Project</h2></a></td>
@@ -30,11 +30,11 @@
                             <p style="font-size: 14px;">I use arch btw</p>
                             <p style="font-size: 8px;">Not really, I'm just a Mint normie...</p>
                         </div>
-                        <img style="flex: 50%; padding: 20px; margin: auto;" src="me.gif" alt="Me">
+                        <img style="flex: 50%; padding: 20px; margin: auto;" src="me.gif" alt="A placeholder for my portrait">
                     </div>
                     
                     <div class="contentGroup" id="personality">
-                        <h3>Personality Tests</h3>
+                        <h3>Personality Quizes</h3>
                         <table>
                             <tr>
                                 <td><a target="_blank" href="test1.png"><img src="test1.png" alt="Test Results 1"></a></td>
@@ -93,13 +93,13 @@
                     <div class="contentGroup">
                         <h3>Detailed Description</h3>
                         <p>Though this idea is simple in principle, I believe it will require quite a bit of work to realize because of its configurable nature - users need to be able to specify which applications to minimize, whether to pause playback, how much to decrease the volume, or possibly even what inputs to automatically simulate, not to mention what to restore and when (if the door closes, or if a keybind is necessary). This would need to be effectively visualized and easily modified - modifiable action elements in a listbox would suffice - and actions performed on programs may need to be recorded by the software as typing names may be tedious or impossible for non-technical users.
-                        <p>Additionally, triggering of the system must allow a large variety of options for the sake of accessibility; users who do not have an Arduino and some kind of sensor for detecting the opening of a door must be able to quickly activate the system though other means, perhaps with a mouse gesture or keybind. Scripts for microcontrollers may need to be supplied with the script to properly send messages to the host computer through serial communication or wirelessly, or if users don't know how to code in C++. All of this should managed and configured from within the software.
+                        <p>Additionally, triggering of the system must allow a large variety of options for the sake of accessibility; users who do not have an Arduino and some kind of sensor for detecting the opening of a door must be able to quickly activate the system though other means, perhaps with a mouse gesture or keybind. Scripts for microcontrollers may need to be supplied with the script to properly send messages to the host computer through serial communication or wirelessly, or if users don't know how to code in C++. Optionally, triggers should have the functionality to trigger or change the state of other actions, which could allow the creation of complex rules. All of this should managed and configured from within the software.
                         <p>Creating a system that allows users to manage actions and controls will be a bit of a task, but should be feasible using object-oriented programming. Implementation and interfacing with various programs will also be a challenge, however can definitely be accomplished with libraries such as <code>pyautogui</code> for Python.</p>
                     </div>
                     <div class="contentGroup" style="display: flex;">
                         <div style="flex: 100%;">
                             <h3>Skills & Tools</h3>
-                            <p>Really, all the tools I need for this project are:</p>
+                            <p>All the tools and materials I need for this project are:</p>
                             <ul>
                                 <li>A sensor & an Arduino</li>
                                 <li>An overly-complicated Python script</li>
@@ -115,9 +115,14 @@
                                 <li>Configuration loading from a file</li>
                                 <li>Serial or wireless communication between microcontrollers and the script</li>
                                 <li>Acting upon an electrical signal</li>
+                                <li>Detecting a key combination on Windows, or when a command is run on Linux</li>
                             </ul>
                         </div>
-                        <img style="flex: 50%; padding: 20px; margin: auto;" src="graph.png" alt="A graph">
+                        <img style="flex: 50%; padding: 20px; margin: auto;" src="graph.png" alt="Physical triggers connecting to a computer">
+                    </div>
+                    <div class="contentGroup">
+                        <h3>Project Outcome</h3>
+                        <p>In conclusion, this project should allow a user to set up actions, such as window minimization, media control, a notification, etc., and manage triggers for said actions such as a serial message or key combination. These factors should combine and perform user-defined tasks such as pausing media when a door is opened. The solution's effectiveness may be measured by how fast it responds to someone walking through a door, whether the user becomes aware of this event, and whether the intruder sees that the user is minimizing windows from their view.</p>
                     </div>
                 </div>
             </div>
