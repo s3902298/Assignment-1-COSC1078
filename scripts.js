@@ -52,7 +52,7 @@ function parallaxBack () {
 }
 
 function toggleRefs (mode) {
-    refsElement.style.display = ((refsElement.style.display == "none" || mode == 1) && mode != 2 ? "block" : "none");
+    refsElement.style.display = ((refsElement.style.display != "block" || mode == 1) && mode != 2 ? "block" : "none");
 }
 
 function bumpAnnoyingButton () {
