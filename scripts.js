@@ -69,7 +69,7 @@ function bumpAnnoyingButton () {
     var yMid = buttonPos.y + buttonGeometry.height / 2;
     var xDiff = (xMid - event.clientX);  // Get push vector
     var yDiff = (yMid - event.clientY);
-    buttonPos = {"x": buttonPos.x + xDiff * 0.75, "y": buttonPos.y + yDiff * 0.75};  // Push button to get out of mouse
+    buttonPos = {"x": buttonPos.x + xDiff * 0.5, "y": buttonPos.y + yDiff * 0.5};  // Push button to get out of mouse
     
     xDiff /= buttonGeometry.width * 2;  // Normalize relative to button size
     yDiff /= buttonGeometry.height * 2;
@@ -89,7 +89,7 @@ function doAnnoyingButton () {
 
 function pressAnnoyingButton () {
     document.getElementById("audio").play();
-    alert("get rickrolled");
+    alert("Ya know the rules,\n   And so do I~");
 }
 
 
